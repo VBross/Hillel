@@ -2516,6 +2516,7 @@ a {
 }
 
 .selector-btn {
+  cursor: pointer;
   width: calc(50% - 4px);
   height: calc(100% - 4px);
   border: 0;
