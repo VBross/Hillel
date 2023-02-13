@@ -2632,4 +2632,135 @@ a {
   }
 }
 
+.single-pub {
+  margin-top: 30px;
+  padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.single-pub__img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+
+.single-pub__img-caption {
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #B3B3BA;
+}
+
+.single-pub__title {
+  font-size: 20px;
+  line-height: 24px;
+  color: #323264;
+  margin-bottom: -15px;
+}
+
+.single-pub__title-mini {
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+  margin-bottom: -15px;
+}
+
+.single-pub__date {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #B3B3BA;
+  padding-bottom: 30px;
+  border-bottom: 4px solid #E6E6F0;
+}
+
+.single-pub__text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.single-pub__title-list {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #46466E;
+}
+
+.single-pub__list {
+  margin-top: -15px;
+}
+
+.single-pub__list-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.single-pub__list-item:not(.single-pub__list-item:last-child) {
+  margin-bottom: 15px;
+}
+
+.single-pub__list-item::marker {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #F0145A;
+}
+
+.single-pub__socials {
+  padding-top: 30px;
+  border-top: 4px solid #E6E6F0;
+}
+
+.single-pub__socials-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #F5F5FA;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px;
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+.single-pub__socials-link--01 {
+  background-image: url(../img/facebook-square.svg);
+}
+
+.single-pub__socials-link--02 {
+  background-image: url(../img/telegram.svg);
+}
+
+.single-pub__socials-link--03 {
+  background-image: url(../img/linkedIn.svg);
+}
+
+.single-pub__socials-link:hover {
+  background-color: #EDEDF7;
+}
+
+@media (min-width: 768px) {
+  .single-pub__img {
+    height: 500px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
