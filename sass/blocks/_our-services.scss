@@ -1,0 +1,19 @@
+.our-services {
+    &__title {
+        margin-top: 8px;
+        margin-bottom: 30px;
+    }
+
+    &__card {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .our-services {
+        &__card {
+            margin-top: 30px;
+        }
+    }
+}
+

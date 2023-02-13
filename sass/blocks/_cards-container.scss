@@ -1,0 +1,46 @@
+.cards-shell {
+    width: 100%;
+}
+
+.cards-container {
+    margin: 0 -30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__card {
+        margin: 30px;
+
+        &__title {
+            display: block;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            color: $active;
+            margin-top: 24px;
+            margin-bottom: 15px;
+            max-width: 290px;
+        }
+
+        &__title:hover {
+            color: $accent;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 26px;
+            color: $white;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .cards-shell {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .cards-shell {
+        width: 33.333%;
+    }
+}

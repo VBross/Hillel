@@ -1,0 +1,59 @@
+.header-background {
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+
+    &__symbol {
+        background-image: url(../img/h-symbol.svg);
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+}
+
+.header-background::before {
+    content: '';
+    height: 10px;
+    position: absolute;
+    border-radius: 0 0 12px 12px;
+    left: 40px;
+    right: 40px;
+    bottom: -20px;
+    background-color: #E7E7F2;
+}
+
+.header-background::after {
+    content: '';
+    height: 10px;
+    position: absolute;
+    border-radius: 0 0 12px 12px;
+    left: 20px;
+    right: 20px;
+    bottom: -10px;
+    background-color: #cacadb;
+}
+
+.black-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: $main;
+    opacity: 0.7;
+    z-index: 1;
+    margin: 0 -15px;
+    }
+
+.grey-background {
+    background-color: $grey-background;
+}
+
+@media (min-width: 768px) {
+    .header-background {
+        filter: none;
+        padding-bottom: 0;
+        margin-bottom: 80px;
+    }
+}

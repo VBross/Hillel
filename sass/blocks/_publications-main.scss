@@ -1,0 +1,120 @@
+.publications-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__container {
+        margin-top: 33px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        gap: 30px;
+
+        &-item {
+
+            &-img {
+                background-position: center center;
+                background-repeat: no-repeat;
+                border-radius: 8px 8px 0px 0px;
+                height: 200px;
+                width: auto;
+                object-fit: cover;
+                background-size: cover;
+
+                &--01 {
+                    background-image: url(../img/publication/publication01.jpg);
+                }
+
+                &--02 {
+                    background-image: url(../img/publication/publication02.jpg);
+                }
+
+                &--03 {
+                    background-image: url(../img/publication/publication03.jpg);
+                }
+            }
+
+
+            &-info {
+                padding: 30px;
+                background-color: $white;
+                border-radius: 0 0 12px 12px;
+                min-height: 57%;
+                max-height: 100%;
+
+                &-title {
+                    display: inline-flex;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $active;
+                    margin: 0 0 15px;
+                    transition-duration: 200ms;
+                    transition-property: color;
+                }
+
+                &-title:hover {
+                    color: $accent;
+                }
+
+                &-date {
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    color: $grey-text;
+                    position: relative;
+                }
+
+                &-date::after {
+                    content: '';
+                    height: 4px;
+                    width: 100%;
+                    background-color: $grey-separator;
+                    position: absolute;
+                    bottom: -18px;
+                    left: 0;
+                }
+
+                &-text {
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: $black;
+                    display: inline-flex;
+                    margin-top: 33px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .publications-wrapper {
+
+        &__container {
+            grid-template-columns: calc(50% - 20px) calc(50% - 20px);
+            grid-template-rows: auto auto;
+
+            &-item:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .publications-wrapper {
+
+        &__container {
+            display: flex;
+
+            &-item {
+                width: calc(33.333% - 30px);
+
+                &-info {
+                    min-height: 313px;
+                }
+            }
+        }
+    }
+}

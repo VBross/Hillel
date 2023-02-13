@@ -1,0 +1,164 @@
+.phone {
+    position: relative;
+    margin: 0 18px;
+
+
+    &::before {
+        content: none;
+        cursor: default;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: $grey-text;
+        position: absolute;
+        left: -12px;
+        top: 7px;
+    }
+
+    &::after {
+        content: none;
+        cursor: default;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: $grey-text;
+        position: absolute;
+        right: -12px;
+        top: 7px;
+    }
+
+    & a {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
+.address {
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+    position: relative;
+    margin-left: 7px;
+}
+
+.facebook {
+    line-height: 0;
+    font-size: 0;
+
+
+    & svg path {
+        transition-duration: 200ms;
+        transition-property: fill;
+    }
+
+    & svg:hover path {
+        fill: $accent;
+    }
+}
+
+.page-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $active;
+
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-bottom: 2px solid $active;
+        border-right: 2px solid $active;
+        transform: rotate(-45deg);
+        transition-duration: 200ms;
+        transition-property: border-color;
+    }
+
+    &:hover {
+        color: $accent;
+
+        &::after {
+            border-color: $accent;
+        }
+    }
+}
+
+.x-mark {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    &--active {
+        background-color: $grey-separator;
+        box-shadow: 0 0 0 7px $grey-separator;
+        border-radius: 4px;
+    }
+
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: $x-mark;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.button {
+    display: block;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $white;
+    border: 0;
+    background-color: $active;
+    padding: 18px 30px;
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+
+
+    &:hover {
+        background-color: $active-hover;
+    }
+
+    &:active {
+        background-color: $active-active;
+    }
+
+    &--small {
+        width: 211px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .phone::after,
+    .phone::before {
+        content: '';
+    }
+}

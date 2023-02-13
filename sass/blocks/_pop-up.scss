@@ -1,0 +1,126 @@
+.body--pop-up {
+    overflow: hidden;
+}
+
+.pop-up--parent {
+    background-color: rgba($color: $main, $alpha: 0.7);
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100000000;
+}
+
+.pop-up {
+    background-color: $grey-background;
+    border-radius: 12px;
+    padding: 30px;
+    margin: auto;
+    height: fit-content;
+
+    &--hard {
+        box-shadow: 0px 15px 80px rgba(40, 40, 86, 0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 110000001;
+        width: 375px;
+    }
+
+    &__title {
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 30px;
+
+        &-x-mark {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+
+            &--active {
+                background-color: $grey-separator;
+                box-shadow: 0 0 0 7px $grey-separator;
+                border-radius: 4px;
+            }
+        }
+
+        &-x-mark::before,
+        &-x-mark::after {
+            cursor: pointer;
+            content: '';
+            position: absolute;
+            top: 15px;
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: $x-mark;
+        }
+
+        &-x-mark::before {
+            transform: rotate(45deg);
+        }
+
+        &-x-mark::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &-input {
+            border: 0;
+            border-radius: 12px;
+            display: inline-flex;
+            padding: 20px 0 20px 20px;
+            resize: none;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+        }
+
+        &-input::placeholder {
+            display: inline-flex;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: $grey-text;
+        }
+
+        &-input:focus-visible {
+            outline: 1px solid $active;
+            border-radius: 8px;
+        }
+
+        &-button {
+            margin-top: 15px;
+        }
+
+        &-message {
+            height: 130px;
+        }
+
+        &-text {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $grey-text;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .pop-up--hard {
+        width: 650px;
+    }
+}

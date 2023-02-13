@@ -1,0 +1,105 @@
+.title {
+    margin-top: 30px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 60px;
+    padding-top: 30px;
+
+    &__person {
+
+        & img {
+            border-radius: 12px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        &-info {
+            position: relative;
+
+            &-name {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                color: $main;
+                margin-bottom: 5px;
+            }
+
+            &-position {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: $grey-text;
+            }
+
+            &-link{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background-color: $grey-background;
+
+                &:hover {
+                    background-color: $grey-background-at;
+                }
+
+                &::after {
+                    content: '';
+                    display: inline-flex;
+                    margin-left: -3px;
+                    width: 7px;
+                    height: 7px;
+                    border-bottom: 2px solid $active;
+                    border-right: 2px solid $active;
+                    transform: rotate(-45deg);
+                    transition-duration: 200ms;
+                    transition-property: border-color;
+                }
+
+                &:hover::after {
+                    border-color: $accent;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .team {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 60px;
+
+        &__person {
+            width: calc(50% - 30px);
+            height: fit-content;
+
+            & img {
+                height: 500px;
+            }
+        }
+    }
+
+    .title {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .team__person {
+        width: calc(33.333% - 40px);
+    }
+
+    .title {
+        padding: 0 120px;
+    }
+}

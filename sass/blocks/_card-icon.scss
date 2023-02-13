@@ -1,0 +1,35 @@
+.card-icon__properties {
+    margin: 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: $white;
+    height: 64px;
+    width: 64px;
+    box-shadow: 0 0 0 14px $white;
+    border-radius: 11px;
+    display: inline-block;
+}
+
+.card-icon__img01 {
+    background-image: url(../img/cards-imgs/card01.svg);
+}
+
+.card-icon__img02 {
+    background-image: url(../img/cards-imgs/card02.svg);
+}
+
+.card-icon__img03 {
+    background-image: url(../img/cards-imgs/card03.svg);
+}
+
+.card-icon__img04 {
+    background-image: url(../img/cards-imgs/card04.svg);
+}
+
+.card-icon__img05 {
+    background-image: url(../img/cards-imgs/card05.svg);
+}
+
+.card-icon__img06 {
+    background-image: url(../img/cards-imgs/card06.svg);
+}

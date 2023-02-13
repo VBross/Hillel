@@ -1,0 +1,125 @@
+.description {
+    margin-top: 31px;
+    margin-bottom: 30px;
+
+    &__selector {
+        margin-bottom: 12px;
+
+        &-list {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            overflow: auto;
+
+            &-item button {
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 37px;
+                color: $grey-text;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                white-space: nowrap;
+                margin-right: 30px;
+            }
+
+            &-active {
+                color: $accent;
+                background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    &__line {
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.3);
+
+    }
+
+    &__info {
+        margin-top: 30px;
+
+        &-header {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 30px;
+        }
+
+        &-text {
+            font-size: 19px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .description {
+        margin-bottom: 60px;
+
+        &__selector-list-item button {
+            font-size: 38px;
+            line-height: 46px;
+        }
+
+        &__info-header {
+            font-size: 30px;
+            line-height: 37px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .description {
+        display: flex;
+        justify-content: center;
+        max-width: 1080px;
+        padding: 0;
+
+        &__selector {
+            margin: 14.5px;
+            &-list {
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+                height: 100%;
+                &-item {
+                     & button {
+                        margin-right: 0;
+                     }
+                }
+            }
+        }
+
+        &__line {
+            width: 4px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0 60px;
+        }
+
+        &__info {
+            width: 50%;
+            margin: 43px 0;
+        }
+    }
+}
+
+
+
+.element::-webkit-scrollbar {
+    width: 0;
+}
+
+.element {
+    -ms-overflow-style: none;
+}
+
+.element {
+    overflow: -moz-scrollbars-none;
+}

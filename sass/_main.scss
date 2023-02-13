@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    transition-duration: 200ms;
+    transition-property: color, fill;
+}
+
+.stop-scroll {
+    overflow: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.body {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: $white;
+    min-width: 358px;
+}
+
+.container {
+    max-width: 1350px;
+    min-width: 358px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.visual-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.hero-font {
+    color: $accent;
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+@media (min-width: 768px) {
+    .hero-font {
+        font-size: 38px;
+        line-height: 46px;
+    }
+}

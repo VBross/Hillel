@@ -1,0 +1,81 @@
+.contact-wrapper {
+    margin: 30px 0;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+        color: $main-alt;
+        font-size: 21px;
+        line-height: 30px;
+
+        &-address {
+            padding-bottom: 30px;
+            border-bottom: 4px solid $grey-separator;
+        }
+
+        &-em-ph {
+            padding-bottom: 30px;
+            border-bottom: 4px solid $grey-separator;
+        }
+
+        &-mail {
+            font-size: 21px;
+            line-height: 30px;
+            color: $active;
+            margin-top: 15px;
+        }
+
+        &-mail:hover {
+            color: $accent;
+        }
+
+        &-facebook {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            gap: 10px;
+            color: $active;
+
+
+            & p {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+
+        &-facebook path {
+            transition-duration: 200ms;
+            transition-property: fill;
+        }
+
+        &-facebook:hover,
+        &-facebook:hover path {
+            color: $accent;
+            fill: #F0145A;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-wrapper {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-wrapper {
+        display: flex;
+        gap: 60px;
+
+        &__info,
+        &-pop-up {
+            width: calc(50% - 30px);
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.person {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__img {
+        border-radius: 12px;
+        min-height: 375px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+
+        &-name {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+            margin-bottom: 15px;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &-position {
+                font-size: 14px;
+                line-height: 22px;
+                color: $grey-text;
+            }
+
+            &-link {
+                font-size: 16px;
+                line-height: 20px;
+                color: $active;
+                width: fit-content;
+            }
+
+            &-link:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    &__separator {
+        width: 100%;
+        height: 4px;
+        background-color: $grey-separator;
+    }
+
+    &__bio {
+        font-size: 16px;
+        line-height: 26px;
+        color: $black;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &-paragraph {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            &-title {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $main;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .person {
+        display: grid;
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        column-gap: 60px;
+
+        &__separator {
+            grid-column: 1 / 3;
+        }
+
+        &__bio {
+            grid-column: 1 / 3;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .person {
+        align-items: flex-start;
+        grid-template-columns: 400px auto;
+
+        &__img {
+            grid-row: 1 / 4;
+            height: 500px;
+        }
+
+        &__separator {
+            grid-column: 2 / 3;
+        }
+
+        &__bio {
+            grid-column: 2 / 3;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+.footer {
+    padding-top: 33px;
+    padding-bottom: 30px;
+    border-top: 2px solid $grey-separator;
+
+    &__mail {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $active;
+        margin-bottom: 30px;
+    }
+
+    &__mail:hover {
+        color: $accent;
+    }
+
+    &__copyright {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: $grey-text;
+    }
+
+    &__address-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+
+        &-map a {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 9px;
+            color: $active;
+        }
+
+        &-map::before {
+            content: none;
+            cursor: default;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background-color: $grey-text;
+            position: absolute;
+            left: -12px;
+            top: 8px;
+        }
+
+        &-map a:hover {
+            color: $accent;
+        }
+    }
+
+    &__contact-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.address--footer {
+    color: $main;
+    margin-left: 0;
+    margin-bottom: 6px;
+}
+
+.phone--footer {
+    margin: 10px 0;
+
+    & a {
+        color: $main;
+    }
+}
+
+.facebook--footer,
+.facebook--footer svg,
+.facebook--footer svg path {
+    width: 38px;
+    height: 38px;
+    fill: $active;
+}
+
+@media (min-width: 768px) {
+
+    .phone--footer {
+        margin: 0 20px;
+    }
+
+    .footer {
+        display: grid;
+        justify-items: start;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "address copyright"
+            "contact contact";
+
+        &__address-block {
+            grid-area: address;
+            flex-direction: row;
+            align-items: flex-start;
+
+            &-map {
+                margin: 0 0 0 20px;
+                position: relative;
+            }
+
+            &-map::before {
+                content: '';
+            }
+        }
+
+        &__contact-block {
+            grid-area: contact;
+            flex-direction: row;
+        }
+
+        &__copyright {
+            grid-area: copyright;
+        }
+
+        &__mail {
+            margin-bottom: 0;
+        }
+    }
+}
